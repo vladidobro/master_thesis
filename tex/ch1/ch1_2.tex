@@ -23,7 +23,7 @@ Viz obr. \ref{fig:polarizacni-elipsa}.
 
 \begin{figure}[htbp]
     \centering
-    \input{./img/tikz/polarizacni-elipsa.tikz}
+    \missingfigure{polarizacni elipsa}
     \caption{Polarizacni elipsa}
     \label{fig:polarizacni-elipsa}
 \end{figure}
@@ -71,12 +71,12 @@ Při této konvenci se kruhově polarizované světlo $\J_\textrm{i}=(1, i)^T$ p
 Úplnější přehled, ze kterého vychází tento oddíl, lze nalézt v \cite{gilReviewMuellerMatrix2014,ossikovskiPoincareSphereMapping2013}.
 Stokesovy parametry obecně mohou narozdíl od Jonesových vektorů popsat i nepolarizované světlo,
 v této práci si však vystačíme s plně polarizovaným světlem a proto je nebudeme definovat obecně, ale pomocí Jonesových vektorů
-\begin{alignat}{3}
-    s_0 &\equiv J_x^* J_x+J_y^* J_y &\equiv \J^\dagger \sigma_0 \J &= I \,,\\
-    s_1 &\equiv J_x^* J_x-J_y^* J_y &\equiv \J^\dagger \sigma_1 \J &= I \cos 2\chi \cos 2\beta \,,  \\
-    s_2 &\equiv J_x^* J_y+J_y^* J_x &\equiv \J^\dagger \sigma_2 \J &= I \cos 2\chi \sin 2\beta \,, \\
-    s_3 &\equiv i J_x^* J_y-i J_y^* J_x  &\equiv \J^\dagger \sigma_3 \J &= I \sin 2\chi \,.
-\end{alignat}
+\begin{align}
+    s_0 \equiv J_x^* J_x+J_y^* J_y\equiv \J^\dagger \sigma_0 \J &= I \,,\\
+    s_1 \equiv J_x^* J_x-J_y^* J_y\equiv \J^\dagger \sigma_1 \J &= I \cos 2\chi \cos 2\beta \,,  \\
+    s_2 \equiv J_x^* J_y+J_y^* J_x\equiv \J^\dagger \sigma_2 \J &= I \cos 2\chi \sin 2\beta \,, \\
+    s_3 \equiv i J_x^* J_y-i J_y^* J_x  \equiv \J^\dagger \sigma_3 \J &= I \sin 2\chi \,.
+\end{align}
 kde jsme je druhými rovnostvi vyjádřili jako střední hodnoty vhodných $2\times 2$ hermitovských matic $\sigma_{i}$. Ty jsou
 \begin{align}
     \sigma_0=\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} ,\,
@@ -131,7 +131,7 @@ Nejdříve spomeneme větu z lineární algebry o polárním rozkladu matice\cit
 
 Prvek reprezentovaný unitární Jonesovou maticí $\mathcal{U}$ zachovává intenzitu a projevuje se pouze fázovým zpožděním mezi dvěma ortogonálními polarizacemi.
 Vzhledem k tomu, že zachovávají intenzitu, musí charakteristický elipsoid být shodný s Poincarého sférou, jedině otočený či převrácený.
-$\mathcal{U}$ lze diagonalizovat a její vlastní čísla jsou komplexní fázové faktory, píšeme tedy\footnote{Ve vzorci vystupuje dyadický součin Jonesových vektorů $\J\J^\dagger$, což je ortogonální projektor na $\J$, ne skalární součin, který by byl psaný $\J^\dagger \J$.}
+$\mathcal{U}$ lze diagonalizovat, a vlastní čísla jsou komplexní fázové faktory, píšeme tedy\footnote{Ve vzorci vystupuje dyadický součin Jonesových vektorů $\J\J^\dagger$, což je ortogonální projektor na $\J$, ne skalární součin, který by byl psaný $\J^\dagger \J$.}
 \begin{equation}
     \mathcal{U}=e^{i\Delta_1} \J_1 \J_1^\dagger + e^{i\Delta_2} \J_2 \J_2^\dagger\,.
 \end{equation}
@@ -177,10 +177,11 @@ Pro body na Poincarého sféře dosadíme $s_0^\textrm{in}=1$ a dostaneme
 \end{equation}
 Jedná se tedy o kontrakci v rovině $s_2s_3$ faktorem $\eta$, ve směru $s_1$ faktorem $(1+\eta^2)/2$ a zároveň posunutím o $(1-\eta^2)/2$.
 Ekvivalentně lze mluvit o kontrakcí stejným faktorem se středem\footnote{$(s_1^\textrm{out}-1)=(s_1^\textrm{in}-1)(1-\eta^2)/2$.} v $s_3=1$.
-Se zmenšujícím $\eta$ (vyšší kvalitou polarizátoru) výsledný elipsoid svým tvarem nabývá podobnosti doutníku.
+Se zmenšujícím $\eta$ (vyšší kvalitou polarizátoru) výsledný elipsoid svým tvarem nabývá podobnosti doutníku, proto v této práci budeme akci $\mathbb{H}$ označovat jako \emph{doutníkovatění}
+\footnote{To si možná zaslouží komentář a obhajobu. Konkurentní termíny ``zploštění'' a ``protáhnutí'' nejsou podle autorova názoru dostatečně výstižné: elipsoid není ani plochý, ani se neprotahuje. Navíc podobenství doutníků je ve fyzice poměrně běžné\cite{liEstimatesEigenvaluesBidrifting2019,middelkampDynamicsDarkBright2011}.}
+Poincarého sféry.
 
 Shrneme-li uvedené poznatky, akce libovolného nedepolarizačního optického prvku je ekvivalentní postupnému působení obecného diatenuátoru (protáhnutí a posunutí ve směru vlastního vektoru $\mathcal{H}$ jako na obr. \ref{fig:UH-Mueller} (b)) a obecného retardéru (rotace podle směru vlastního vektoru $\mathcal{U}$ jako na obr. \ref{fig:UH-Mueller} (a)), případně v opačném pořadí.
-
 Znázornění zobrazení Poincarého sféry nachází vzužití především pro depolarizační Muellerovy matice, ale i v našem případě nabízí jednoduchý intuitivní způsob přemýšlení o polarizaci, který je důležitý např. při rychlých rozhodnutích v laboratoři, kdy není čas násobit komplexní matice.
 
 \begin{figure}[htbp]
